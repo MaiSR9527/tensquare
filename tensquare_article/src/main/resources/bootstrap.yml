@@ -1,0 +1,33 @@
+spring:
+  cloud:
+    config:
+      name: article
+      profile: dev
+      label: master
+      uri: http://localhost:12000
+#server:
+#  port: 9004
+#spring:
+#  application:
+#    name: tensquare-article #指定服务名
+#  datasource:
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.74.128:3306/tensquare_article?useUnicode=true&amp;characterEncoding=UTF8&useSSL=false
+#    username: root
+#    password: root
+#  jpa:
+#    database: mysql
+#    show-sql: true
+#  redis:
+#    host: 192.168.74.128
+#    port: 6379
+#  data:
+#    mongodb:
+#      database: commentdb
+#      host: 192.168.74.128
+#eureka:
+#  client:
+#    service-url:
+#      defauleZone: http://localhost:6868/eureka
+#  instance:
+#    prefer-ip-address: true

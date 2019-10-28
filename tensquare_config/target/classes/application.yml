@@ -1,0 +1,20 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: tensquare-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/maishuren/tensquare.git
+          username: 13129761558@163.com
+          password: mai120814
+      allow-override: true
+  rabbitmq:
+    host: 192.168.74.128
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    config:
+      name: recruit
+      profile: dev
+      label: master
+      uri: http://localhost:12000
+#server:
+#  port: 9002
+#spring:
+#  application:
+#    name: tensquare-recruit #指定服务名
+#  datasource:
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.74.128:3306/tensquare_recruit?characterEncoding=UTF8&useSSL=false
+#    username: root
+#    password: root
+#  jpa:
+#    database: mysql
+#    show-sql: true

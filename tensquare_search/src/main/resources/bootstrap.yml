@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      name: search
+      profile: dev
+      label: master
+      uri: http://localhost:12000
+#server:
+#  port: 9007
+#spring:
+#  data:
+#    elasticsearch:
+#      cluster-nodes: 192.168.74.128:9300
+#      cluster-name: elasticsearch
+#
+#  application:
+#    name: tensquare_search

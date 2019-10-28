@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    config:
+      name: consumer
+      profile: dev
+      label: master
+      uri: http://localhost:12000
+#server:
+#  port: 9009
+#spring:
+#  application:
+#    name: tensquare-consumer
+#  rabbitmq:
+#    host: 192.168.74.128
+#aliyun:
+#  sms:
+#    accessKeyId: LTAI4FcymuuDbNCTLM1ybLRv
+#    accessKeySecret: UFq0RSi2Au2u611nPmiLDvwHB8pHnS
+#    template_code: SMS_176535076
+#    sign_name: 十次方社交论坛

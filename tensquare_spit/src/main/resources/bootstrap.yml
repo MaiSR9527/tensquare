@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    config:
+      name: spit
+      profile: dev
+      label: master
+      uri: http://localhost:12000
+#server:
+#  port: 9006
+#spring:
+#  application:
+#    name: tensquare-spit
+#  data:
+#    mongodb:
+#      host: 192.168.74.128
+#      database: spitdb
+#  redis:
+#    host: 192.168.74.128
+#

@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    config:
+      name: gathering
+      profile: dev
+      label: master
+      uri: http://localhost:12000
+
+#server:
+#  port: 9005
+#spring:
+#  application:
+#    name: tensquare-gathering #指定服务名
+#  datasource:
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.74.128:3306/tensquare_gathering?useUnicode=true&amp;characterEncoding=UTF8&useSSL=false
+#    username: root
+#    password: root
+#  jpa:
+#    database: mysql
+#    show-sql: true

@@ -1,0 +1,31 @@
+spring:
+  cloud:
+    config:
+      name: qa
+      profile: dev
+      label: master
+      uri: http://localhost:12000
+#server:
+#  port: 9003
+#spring:
+#  application:
+#    name: tensquare-qa #指定服务名
+#  datasource:
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://192.168.74.128:3306/tensquare_qa?useUnicode=true&amp;characterEncoding=UTF8&useSSL=false
+#    username: root
+#    password: root
+#  jpa:
+#    database: mysql
+#    show-sql: true
+#eureka:
+#  client:
+#    service-url:
+#      defauleZone: http://localhost:6868/eureka
+#  instance:
+#    prefer-ip-address: true
+#
+#jwt:
+#  config:
+#    key: msr
+#    ttl: 36000000

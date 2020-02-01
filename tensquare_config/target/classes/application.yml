@@ -12,7 +12,7 @@ spring:
           password: mai120814
       allow-override: true
   rabbitmq:
-    host: 192.168.74.128
+    host: 47.96.175.101
 management:
   endpoints:
     web:

@@ -21,7 +21,7 @@ spring:
 #  routes:
 #    tensquare-base:
 #      path: /base/**
-#      serviceId: tensquare-base
+#      C: tensquare-base
 #    tensquare-gathering: #活动
 #      path: /gathering/**
 #      serviceId: tensquare-gathering

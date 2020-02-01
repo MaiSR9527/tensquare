@@ -24,6 +24,9 @@
         <module>tensquare_manage</module>
         <module>tensquare_web</module>
         <module>tensquare_config</module>
+        <module>tensquare_article_crawler</module>
+        <module>tensquare_user_crawler</module>
+        <module>tensquare_ai</module>
     </modules>
 
     <name>tensquare_parent</name>

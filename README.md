@@ -1,2 +1,22 @@
 # 十次方项目
 ## 模块介绍
+dist:
+tensquare_ai
+tensquare_article
+tensquare_article_crawler
+tensquare_base
+tensquare_common
+tensquare_config
+tensquare_consumer
+tensquare_eureka
+tensquare_friend
+tensquare_gather
+tensquare_manage
+tensquare_qa
+tensquare_recruit
+tensquare_search
+tensquare_spit
+tensquare_user
+tensquare_user_crawler
+tensquare_web
+nginx-1.1..12

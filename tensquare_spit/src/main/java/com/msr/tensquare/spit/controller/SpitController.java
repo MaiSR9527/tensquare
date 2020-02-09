@@ -47,6 +47,7 @@ public class SpitController {
      */
     @GetMapping("/{id}")
     public Result findOne(@PathVariable("id") String id) {
+        spitService.readUp(id);
         return new Result(true, StatusCode.OK, "查询成功", spitService.findById(id));
     }
 
@@ -84,7 +85,6 @@ public class SpitController {
      */
     @DeleteMapping("{id}")
     public Result deleteById(@PathVariable("id") String id) {
-
         spitService.deleteById(id);
         return new Result(true, StatusCode.OK, "删除成功");
     }
@@ -114,6 +114,7 @@ public class SpitController {
     @PutMapping("/thumbup/{id}")
     public Result updateThumbup(@PathVariable("id") String id) {
         //判断用户是否点过赞
+        //从token中获取
         String userId = "2013";
         if (!StringUtils.isEmpty(redisTemplate.opsForValue().get("thumbup_" + userId + "_" + id))) {
             return new Result(false, StatusCode.ERROR, "你已经点过赞了");
@@ -122,6 +123,4 @@ public class SpitController {
         redisTemplate.opsForValue().set("thumbup_" + userId + "_" + id, "1");
         return new Result(true, StatusCode.OK, "点赞成功");
     }
-
-
 }

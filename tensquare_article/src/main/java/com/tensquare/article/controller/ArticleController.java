@@ -79,6 +79,7 @@ public class ArticleController {
         //先查缓存
         Article article = (Article) redisTemplate.opsForValue().get("article_" + id);
         if (ObjectUtils.isEmpty(article)) {
+            //防止缓存击穿
             if (reenLock.tryLock()) {
                 try {
                     article = articleService.findById(id);
@@ -92,7 +93,7 @@ public class ArticleController {
                 article = (Article) redisTemplate.opsForValue().get("article_" + id);
                 if (ObjectUtils.isEmpty(article)) {
                     try {
-                        Thread.sleep(100);
+                        TimeUnit.SECONDS.sleep(100);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

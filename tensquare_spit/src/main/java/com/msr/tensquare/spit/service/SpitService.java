@@ -122,6 +122,29 @@ public class SpitService {
         mongoTemplate.updateFirst(query, update, "spit");
     }
 
-    //TODO:实现增加浏览量和分享数
+    /**
+     * 增加浏览量
+     *
+     * @param id 吐槽id
+     */
+    public void readUp(String id) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("_id").is(id));
+        Update update = new Update();
+        update.inc("visits", 1);
+        mongoTemplate.updateFirst(query, update, "spit");
+    }
 
+    /**
+     * 增加分享量
+     *
+     * @param id 托槽id
+     */
+    public void shareUp(String id) {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("_id").is(id));
+        Update update = new Update();
+        update.inc("share", 1);
+        mongoTemplate.updateFirst(query, update, "spit");
+    }
 }

@@ -91,36 +91,31 @@ public class LabelService {
      * @return 返回结果
      */
     public List<Label> findSearch(Label label) {
-        return labelDao.findAll(new Specification<Label>() {
-            /**
-             *
-             * @param root 跟对象，也就是要把条件封装到哪一个对象，
-             * @param criteriaQuery 封装的都是关键自查询，
-             * @param criteriaBuilder 封装条件对象
-             * @return
-             */
-            @Override
-            public Predicate toPredicate(Root<Label> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
-                //存放所有查询条件
-                List<Predicate> predicateList = new ArrayList<>();
+        return labelDao.findAll((Specification<Label>) (root, criteriaQuery, criteriaBuilder) -> {
+            //存放所有查询条件
+            List<Predicate> predicateList = new ArrayList<>();
 
-                if (StringUtils.isNotBlank(label.getLabelname())) {
-                    Predicate labelName = criteriaBuilder.like(root.get("labelname").as(String.class), "%" + label.getLabelname() + "%");
-                    predicateList.add(labelName);
-                }
-
-                if (StringUtils.isNotBlank(label.getState())) {
-                    Predicate state = criteriaBuilder.equal(root.get("state").as(String.class), label.getState());
-                    predicateList.add(state);
-
-                }
-
-                // 最终返回值
-                Predicate[] predicates = new Predicate[predicateList.size()];
-                predicates = predicateList.toArray(predicates);
-
-                return criteriaBuilder.and(predicates);
+            if (StringUtils.isNotBlank(label.getLabelname())) {
+                Predicate labelName = criteriaBuilder.like(root.get("labelname").as(String.class), "%" + label.getLabelname() + "%");
+                predicateList.add(labelName);
             }
+
+            if (StringUtils.isNotBlank(label.getState())) {
+                Predicate state = criteriaBuilder.equal(root.get("state").as(String.class), label.getState());
+                predicateList.add(state);
+
+            }
+            if (StringUtils.isNotBlank(label.getRecommend())) {
+                Predicate state = criteriaBuilder.equal(root.get("recommend").as(String.class), label.getRecommend());
+                predicateList.add(state);
+
+            }
+
+            // 最终返回值
+            Predicate[] predicates = new Predicate[predicateList.size()];
+            predicates = predicateList.toArray(predicates);
+
+            return criteriaBuilder.and(predicates);
         });
     }
 

@@ -109,6 +109,18 @@
 
 路由转发、比前台更加严格的路由过滤
 
+### 文章爬虫微服务：tensquare_article_crawler
+
+爬取CSDN上的文章
+
+### 用户爬虫微服务：tensquare_user_crawler
+
+爬取每篇文章的用户信息
+
+### 人工智能微服务：tensquare_ai
+
+利用IK分词器对文章进行分词，再使用Deeplearning4j构建词向量，构建卷积神经网络模型进行训练
+
 ### 基础微服务：tensquare_base
 
 主要标签操作功能，如Java、C++等标签。

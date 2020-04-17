@@ -9,7 +9,19 @@
       <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-schemas>*:tensquare_article,tensquare_base,tensquare_friend,tensquare_gathering,tensquare_qa,tensquare_recruit,tensquare_user</introspection-schemas>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="tensquare_article" />
+            <name qname="tensquare_base" />
+            <name qname="tensquare_friend" />
+            <name qname="tensquare_gathering" />
+            <name qname="tensquare_qa" />
+            <name qname="tensquare_recruit" />
+            <name qname="tensquare_user" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
     </data-source>
   </component>
 </project>

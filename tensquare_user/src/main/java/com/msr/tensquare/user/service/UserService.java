@@ -198,7 +198,7 @@ public class UserService {
         Map<String, String> map = new HashMap<>();
         map.put("mobile", mobile);
         map.put("checkCode", checkCode);
-        //rabbitTemplate.convertAndSend("sms", map);
+        rabbitTemplate.convertAndSend("sms", map);
         log.info("发送验证码：{}----手机号码为：{}", checkCode, mobile);
         //向控制台发一份
     }
